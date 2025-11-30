@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Safari Style New Tab",
+  "version": "1.0.0",
+  "description": "A customized start page inspired by iOS Safari.",
+  "permissions": [
+    "storage",
+    "browsingData",
+    "bookmarks",
+    "commands"
+  ],
+  "commands": {
+    "open_panel": {
+      "suggested_key": {
+        "default": "Alt+Z"
+      },
+      "description": "Toggle overlay panel"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
