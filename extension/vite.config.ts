@@ -38,8 +38,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        // Main New Tab Page
-        newtab: resolve(__dirname, 'index.html'),
+        // Popup Page
+        popup: resolve(__dirname, 'popup.html'),
         // Background Service Worker
         background: resolve(__dirname, 'background.ts'),
       },

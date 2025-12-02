@@ -5,10 +5,17 @@
   "description": "A customized start page inspired by iOS Safari.",
   "permissions": [
     "storage",
-    "browsingData",
-    "bookmarks",
-    "commands"
+    "activeTab",
+    "scripting"
   ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
   "commands": {
     "open_panel": {
       "suggested_key": {
@@ -16,9 +23,6 @@
       },
       "description": "Toggle overlay panel"
     }
-  },
-  "chrome_url_overrides": {
-    "newtab": "index.html"
   },
   "content_scripts": [
     {
