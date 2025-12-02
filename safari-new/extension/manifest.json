@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Safari Start Page Saver",
+  "version": "1.0",
+  "description": "Save current tab to your Safari Start Page Dashboard.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Save to Dashboard"
+  },
+  "icons": {
+    "48": "icon.png" 
+  }
+}

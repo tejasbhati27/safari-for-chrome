@@ -1,0 +1,5 @@
+{
+  "name": "Safari Start Page & Dashboard",
+  "description": "A glassmorphic, Apple-inspired start page dashboard with Vercel KV integration and Chrome Extension support.",
+  "requestFramePermissions": []
+}

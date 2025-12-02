@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      font-family: -apple-system, system-ui, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 12px;
+    }
+    h2 { font-size: 16px; margin: 0 0 12px 0; font-weight: 600; }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #d2d2d7;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary {
+      background-color: #0071e3;
+      color: white;
+    }
+    .btn-primary:hover { background-color: #0077ed; }
+    .btn-secondary {
+      background-color: #e8e8ed;
+      color: #1d1d1f;
+      margin-top: 8px;
+    }
+    .hidden { display: none; }
+    .status { margin-top: 10px; font-size: 12px; text-align: center; }
+    .success { color: #28cd41; }
+    .error { color: #ff3b30; }
+  </style>
+</head>
+<body>
+  <!-- Setup View -->
+  <div id="setup-view" class="hidden">
+    <h2>Configuration</h2>
+    <input type="text" id="dashboard-url" placeholder="https://your-site.vercel.app" />
+    <input type="password" id="dashboard-password" placeholder="Dashboard Password" />
+    <button id="save-config" class="btn-primary">Save Configuration</button>
+  </div>
+
+  <!-- Main View -->
+  <div id="main-view" class="hidden">
+    <div class="card">
+        <h2>Save Bookmark</h2>
+        <div id="tab-title" style="font-size: 13px; margin-bottom: 8px; color: #86868b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
+        <button id="save-bookmark" class="btn-primary">Save to Dashboard</button>
+        <div id="status-msg" class="status"></div>
+    </div>
+    <button id="edit-config" class="btn-secondary">Settings</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
